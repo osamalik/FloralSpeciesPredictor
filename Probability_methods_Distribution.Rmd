@@ -1,0 +1,24 @@
+---
+title: "Statistical Analysis"
+description: |
+        Result of Iris dataset after performing Probability methods/Distribution
+---
+
+```{r message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Normal probability plot of sepal length
+qqnorm(iris$Sepal.Length)
+qqline(iris$Sepal.Length)
+
+# Density plot of petal length, colored by species
+library(ggplot2)
+ggplot(iris, aes(x=Petal.Length, fill=Species)) + 
+  geom_density(alpha=0.5) + 
+  ggtitle("Density Plot of Petal Length by Species")
+
+# Compute the probability of a random Iris flower having a sepal length greater than 6
+1 - pnorm(6, mean=mean(iris$Sepal.Length), sd=sd(iris$Sepal.Length))
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)

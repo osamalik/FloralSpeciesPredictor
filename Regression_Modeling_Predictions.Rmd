@@ -1,0 +1,35 @@
+---
+title: "Statistical Analysis"
+description: |
+        Result of Iris dataset after performing Regression Modeling and Predictions
+  
+---
+```{r message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Split the dataset into training and testing sets
+set.seed(123)
+train_index <- sample(1:nrow(iris), 0.7*nrow(iris))
+train <- iris[train_index,]
+test <- iris[-train_index,]
+
+# Fit a linear regression model to predict petal length from sepal length
+model <- lm(Petal.Length ~ Sepal.Length, data=train)
+
+# Print the model summary
+summary(model)
+
+# Plot the data points and the regression line
+plot(train$Sepal.Length, train$Petal.Length, main="Regression of Petal Length on Sepal Length")
+abline(model, col="red")
+
+# Make predictions on the testing set
+predictions <- predict(model, newdata=test)
+
+# Compute the root mean squared error (RMSE)
+rmse <- sqrt(mean((test$Petal.Length - predictions)^2))
+cat("RMSE:", rmse, "\n")
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)

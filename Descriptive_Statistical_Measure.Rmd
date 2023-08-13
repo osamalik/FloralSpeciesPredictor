@@ -1,0 +1,18 @@
+---
+title: "Statistical Analysis"
+description: |
+        Result of Iris dataset after performing Descriptive Statistical Measure
+  
+---
+```{r message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Descriptive statistics for each variable by species
+aggregate(iris[,1:4], list(Species=iris$Species), summary)
+
+# Mean, median, and standard deviation for each variable
+apply(iris[,1:4], 2, function(x) c(mean=mean(x), median=median(x), sd=sd(x)))
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)

@@ -1,0 +1,33 @@
+---
+title: "Statistical Analysis"
+description: |
+        Result of Iris dataset after performing Confidence interval of Descriptive measures and Regression estimates.
+  
+---
+```{r message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Load the Iris dataset
+data(iris)
+
+# Calculate descriptive statistics for the dataset
+summary(iris)
+
+# Calculate confidence interval for mean and standard deviation of sepal length for each species
+t.test(iris$Sepal.Length[iris$Species == "setosa"], conf.level = 0.95)
+t.test(iris$Sepal.Length[iris$Species == "versicolor"], conf.level = 0.95)
+t.test(iris$Sepal.Length[iris$Species == "virginica"], conf.level = 0.95)
+
+# Calculate confidence interval for correlation between petal length and petal width for all species combined
+cor.test(iris$Petal.Length, iris$Petal.Width, conf.level = 0.95)
+
+# Fit a linear regression model to predict sepal length from petal length and width
+model <- lm(Sepal.Length ~ Petal.Length + Petal.Width, data = iris)
+summary(model)
+
+# Calculate confidence intervals for the regression coefficients
+confint(model, level = 0.95)
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)

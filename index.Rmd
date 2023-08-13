@@ -1,0 +1,48 @@
+---
+title: "The Uncertainty Unicorns"
+image: "Group_Logo.webp"
+links:
+  - label: Osama
+  - label: Abdullah
+  - label: Hamza
+  - label: Hasnain
+output:
+  postcards::trestles
+site: distill::distill_website
+---
+ 
+## Project Description
+
+**Project Title:** Statistical Analysis of Iris Dataset using R
+
+The Iris dataset is a classic and widely used dataset in the field of machine learning. It contains 150 observations of iris flowers, with 50 observations for each of the three different species of iris flowers (Iris setosa, Iris versicolor, and Iris virginica). The dataset contains four attributes for each observation: sepal length, sepal width, petal length, and petal width. In this project, we will perform statistical analysis on the Iris dataset using R language.
+
+**The main objectives of this project are:**
+
+**1.** To explore the Iris dataset and visualize the distribution of each attribute.
+
+**2.** To compute the descriptive statistics of each attribute, such as mean, median, and standard deviation.
+
+**3.** To model the relationship between the attributes using regression analysis and make predictions based on the model.
+
+**4.** To calculate the confidence interval of descriptive measures and regression estimates.
+
+**Methods:** We will use various statistical methods in R language to achieve our objectives. We will use ggplot2 package to create visualizations of the distribution of each attribute. We will use base R functions to calculate the descriptive statistics of each attribute. We will use the lm() function to perform linear regression analysis and make predictions based on the model. We will use the confint() function to calculate the confidence interval of descriptive measures and regression estimates.
+
+## Problem Statment
+
+The Iris dataset is a well-known benchmark dataset used in machine learning and statistical analysis. The dataset contains four continuous variables representing the length and width of petals and sepals of three different species of iris flowers (setosa, versicolor, and virginica). The goal of this analysis is to explore the relationships between the variables and to build a predictive model that can accurately classify the iris flowers into their respective species based on their petal and sepal measurements. This analysis aims to provide insights into the relationships between the variables and to develop a reliable model for future predictions.
+
+## Objective
+
+The objective of this work is to analyze the Iris dataset using statistical methods and create visualizations to gain insights into the relationships between the different attributes of the iris flowers. We will use descriptive statistics, probability methods/distributions, regression modeling and predictions, and confidence intervals of descriptive measures and regression estimates to analyze the dataset.
+
+## Data Description
+
+The Iris dataset is a well-known dataset in the field of machine learning, first introduced by Ronald Fisher in 1936. The dataset consists of 150 observations of iris flowers, with 50 observations for each of the three different species of iris flowers - Iris setosa, Iris versicolor, and Iris virginica. Each observation is characterized by four attributes: sepal length, sepal width, petal length, and petal width, all measured in centimeters.
+
+Sepal refers to the green leaf-like structures that protect the flower bud, and petal refers to the colorful part of the flower. The sepal length and width are measured from the base of the sepal to the tip, while the petal length and width are measured from the base of the petal to the tip.
+
+The dataset is commonly used for supervised machine learning tasks, such as classification and regression. The goal of classification tasks is to predict the class of an observation based on its attribute values, while the goal of regression tasks is to predict a continuous value, such as the length or width of a petal or sepal, based on the other attribute values.
+
+The Iris dataset can be easily accessed from various sources, including the UCI Machine Learning Repository. It is often used as a benchmark dataset for testing machine learning algorithms, and its compact size and simple structure make it an ideal dataset for teaching introductory concepts of machine learning.

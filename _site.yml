@@ -1,0 +1,22 @@
+name: "."
+title: "Probablity Project"
+description: |
+  Probablity Project
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "TASK 1"
+      href: Graphical_tabular_representation.html
+    - text: "TASK 2"
+      href: Descriptive_Statistical_Measure.html
+    - text: "TASK 3"
+      href: Probability_methods_Distribution.html
+    - text: "TASK 4"
+      href: Regression_Modeling_Predictions.html
+    - text: "TASK 5"
+      href: Descriptive_measures_Regression_estimates.html
+    # - text: "Conclusion"
+    #   href: conclusion.html
+output: distill::distill_article
